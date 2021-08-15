@@ -21,8 +21,10 @@ SELECT publishers.name , books.name FROM books INNER JOIN publishers ON publishe
 
 /*8-*/
 
-/*9*/
+SELECT books.name, authors.first_name,authors.surname FROM books JOIN book_authors ON book_authors.book_id = books.id JOIN authors ON authors.id = book_authors.author_id ;
 
+/*9*/
+SELECT books.name FROM books JOIN book_authors ON book_authors.book_id = books.id JOIN authors ON authors.id = book_authors.author_id WHERE authors.surname='Burns'; 
 /*10*/
 
 /*11*/
@@ -32,3 +34,4 @@ SELECT publishers.name , books.name FROM books INNER JOIN publishers ON publishe
 /*13*/
 
 /*14*/
+
