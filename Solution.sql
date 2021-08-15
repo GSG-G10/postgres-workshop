@@ -43,7 +43,7 @@ FROM books
 SELECT books.name
 FROM books
     INNER JOIN book_authors ON book_authors.book_id = books.id
-    JOIN authors ON authors.id = book_authors.author_id
+    INNER JOIN authors ON authors.id = book_authors.author_id
 WHERE authors.surname = 'Burns';
 /*10*/
 SELECT authors.first_name,
